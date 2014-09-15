@@ -60,7 +60,7 @@ bool best( int set, bool turn ) {
 
     memo[set][turn] = Best;
     
-    return ( memo[set][turn] );
+    return ( Best );
     
 }
 
