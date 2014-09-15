@@ -48,6 +48,8 @@ bool best( int set, bool turn ) {
         return ( memo[set][turn] );
     }
     
+    bool Best = false;
+
     for ( int i = 0; i < n; ++i ) {
         if ( !( set & (1<<i) ) ) {
             if ( !best( set | (1<<i), !turn ) ) {
@@ -58,7 +60,7 @@ bool best( int set, bool turn ) {
 
     memo[set][turn] = Best;
     
-    return ( Best );
+    return ( memo[set][turn] );
     
 }
 
@@ -67,8 +69,6 @@ int main( ) {
     scanf( "%d", &t );
 
     while ( t-- ) {
-    
-        int Alice = 0;
     
         scanf( "%d", &n );
     
