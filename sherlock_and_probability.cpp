@@ -11,7 +11,7 @@ using namespace std;
 
 int t;
 long long n, k, ones, pairs;
-long long F[MAXN+1];
+int F[MAXN+1];
 char text[MAXN+1];
 
 long long gcd( long long a, long long b ) {
